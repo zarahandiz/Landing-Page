@@ -18,7 +18,7 @@ body {
 }
 
 .navbar {
-    background-color: (black);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(14px);
     position: sticky;
     top: 0;
@@ -92,7 +92,7 @@ body {
 .highlight {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #d2000099;
+    color: #ff2a2a;
     display: block;
     border-left: 4px solid #900000;
     padding-left: 12px;
@@ -135,12 +135,13 @@ body {
 
 .btn-secondary {
     background-color: transparent;
-    color: #900000;
+    color: #ffffff;
     border: 2px solid #900000;
 }
 
 .btn-secondary:hover {
-    background-color: #eff6ff;
+    background-color: #900000;
+    color: #ffffff;
 }
 
 .hero-image {
@@ -225,7 +226,7 @@ body {
 }
 
 .project-card {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 12px;
     padding: 32px 24px;
     flex: 1;
@@ -254,6 +255,99 @@ body {
     line-height: 1.6;
 }
 
+.contact {
+    padding: 5rem 0;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact h2 {
+    font-size: 32px;
+    font-weight: 800;
+    border-bottom: 4px solid #900000;
+    padding-bottom: 8px;
+}
+
+.contact-container {
+    width: 85%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background-color: #2a2828;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 16px;
+    gap: 1rem;
+    flex: 1;
+    min-width: 240px;
+    max-width: 300px;
+    border: 1px solid #3a3838;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.2);
+    border-color: #900000;
+}
+
+.contact-container img {
+    background-color: #1e1e1f;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow: 0 0 8px #181818;
+}
+
+.contact-container a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.contact-container h3 {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #a1a1a1;
+}
+
+.contact-container p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+footer {
+    width: 100%;
+    background-color: #111111;
+    margin-top: 3rem;
+}
+
+footer p {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888888;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column-reverse;
@@ -289,6 +383,16 @@ body {
     }
 
     .project-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
         width: 100%;
         max-width: 100%;
     }
